@@ -14,7 +14,6 @@ services:
             - api
     api:
         container_name: "proxy"
-        user: "1000:1001"
         build:
             dockerfile: "docker/api/.Dockerfile"
             context: "."
