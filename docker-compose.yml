@@ -23,7 +23,7 @@ services:
         extra_hosts:
             - "host.docker.internal:host-gateway"
         environment:
-            PHP_IDE_CONFIG: "serverName=LocalhostBetterFast"
+            PHP_IDE_CONFIG: "serverName=LocalhostClearDrx"
         volumes:
             - "./:/var/www"
 
