@@ -15,8 +15,11 @@ class FormsortController extends Controller
     public function submit(FormsortSubmitRequest $request): JsonResponse
     {
         $data = $request->all();
+        $attrs = $request->attributes->all();
 
-        $checkoutUrl = $this->dosableService->handleFormsortSubmission($data);
+       $mergedData = array_merge($data, $attrs);
+
+        $checkoutUrl = $this->dosableService->handleFormsortSubmission($mergedData);
 
         return response()->json(['checkout_url' => $checkoutUrl]);
     }
